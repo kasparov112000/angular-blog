@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule,  MatInputModule, MatButtonModule} from '@angular/material';
+import { MatToolbarModule, MatCardModule,  MatInputModule, MatButtonModule, MatExpansionModule} from '@angular/material';
+import { HeaderComponent } from './header/header.component';
+import { PostListComponent } from './post/post-list/post-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    HeaderComponent,
+    PostListComponent
   ],
   imports: [
 
@@ -19,7 +23,9 @@ import { MatCardModule,  MatInputModule, MatButtonModule} from '@angular/materia
     FormsModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
