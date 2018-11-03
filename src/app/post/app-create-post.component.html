@@ -1,7 +1,9 @@
 <h2> Add Post App </h2>
-<textarea rows="6">
+<textarea [(ngModel)]="ngContent" #postInput rows="6">
 </textarea>
 
 <hr>
 
-<button>Submit Post </button>
+<button (click)="onSubmitPost()">Submit Post </button>
+
+<p>{{ postContent }} </p>

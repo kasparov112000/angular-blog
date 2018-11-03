@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 
 export class CreatePostComponent {
 
+  postContent = 'hello world';
+  ngContent = '';
+   onSubmitPost() {
+    this.postContent = this.ngContent;
+
+  }
+
+
 }
