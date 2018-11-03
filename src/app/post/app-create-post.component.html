@@ -1,9 +1,14 @@
-<h2> Add Post App </h2>
-<textarea [(ngModel)]="ngContent" #postInput rows="6">
-</textarea>
 
-<hr>
+<mat-card>
+<mat-form-field>
+  <textarea matInput [(ngModel)]="ngContent"  rows="6"></textarea>
+ </mat-form-field>
+  <button mat-raised-button color="accent" (click)="onSubmitPost()">Submit Post</button>
+</mat-card>
 
-<button (click)="onSubmitPost()">Submit Post </button>
+
 
 <p>{{ postContent }} </p>
+
+
+
