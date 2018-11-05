@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { Post } from '../post.model';
+import { PostsService } from './../post.service';
+import { Component, Input, Injectable } from '@angular/core';
+import { Post } from '../post.model';c
 
 @Component(
   {
@@ -8,25 +9,16 @@ import { Post } from '../post.model';
     styleUrls: ['./post-list.component.css']
   }
 )
+
+@Injectable({providedIn: 'root'})
 export class PostListComponent {
 
   @Input()
   posts: Post[] = [];
 
-  // [
-  //   {
-  //     title: 'my first post',
-  //    content: 'my content for first post'
-  //   },
-  //   {
-  //     title: 'my second post',
-  //    content: 'my content for second post'
-  //   },
-  //   {
-  //     title: 'my third post',
-  //    content: 'my content for third post'
-  //   }
-  // ];
 
+ constructor(public postsService: PostsService) {
+
+ }
 
 }
