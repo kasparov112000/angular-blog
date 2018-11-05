@@ -1,6 +1,6 @@
 import { PostsService } from './../post.service';
-import { Component, Input, Injectable } from '@angular/core';
-import { Post } from '../post.model';c
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component(
   {
@@ -10,15 +10,17 @@ import { Post } from '../post.model';c
   }
 )
 
-@Injectable({providedIn: 'root'})
-export class PostListComponent {
+
+export class PostListComponent implements OnInit {
 
   @Input()
   posts: Post[] = [];
 
 
- constructor(public postsService: PostsService) {
+ constructor(public postsService: PostsService) {}
 
+ ngOnInit() {
+   this.posts = this.postsService.getPost();
  }
 
 }
