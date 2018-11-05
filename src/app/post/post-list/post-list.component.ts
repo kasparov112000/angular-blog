@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component(
   {
@@ -10,7 +11,7 @@ import { Component, Input } from '@angular/core';
 export class PostListComponent {
 
   @Input()
-  posts = [];
+  posts: Post[] = [];
 
   // [
   //   {
