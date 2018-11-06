@@ -21,7 +21,7 @@ export class CreatePostComponent {
        return;
      }
 
-     this.postsService.addPost(form.value.title, form.value.matDialogContent);
+     this.postsService.addPost(form.value.title, form.value.content);
 
   }
 
